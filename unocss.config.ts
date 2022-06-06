@@ -4,14 +4,16 @@ import {
   presetIcons,
   presetUno,
   presetWebFonts,
-  // transformerDirectives,
-  // transformerVariantGroup,
 } from 'unocss'
 
 export default defineConfig({
   shortcuts: [
-    ['btn', 'px-4 py-1 rounded inline-block bg-teal-600 text-white cursor-pointer hover:bg-teal-700 disabled:cursor-default disabled:bg-gray-600 disabled:opacity-50'],
-    ['icon-btn', 'text-[0.9em] inline-block cursor-pointer select-none opacity-75 transition duration-200 ease-in-out hover:opacity-100 hover:text-teal-600'],
+    ['word-block', 'px-2 py-1.5 rounded text-center hover:bg-gray-500 hover:bg-opacity-10 cursor-pointer'],
+    [/^icon-btn-(.*)$/, ([, c], { theme }) => {
+      const color = (theme as any).colors[c]
+      if (color)
+        return `text-[0.9em] inline-block cursor-pointer select-none opacity-75 transition duration-200 ease-in-out hover:opacity-100 hover:text-${color}`
+    }],
   ],
   presets: [
     presetUno(),
@@ -28,8 +30,10 @@ export default defineConfig({
       },
     }),
   ],
-  // transformers: [
-  //   transformerDirectives(),
-  //   transformerVariantGroup(),
-  // ],
+  theme: {
+    colors: {
+      primary: '#0d9488', // teal-600
+      disabled: '#4b5563', // gray-600
+    },
+  },
 })
