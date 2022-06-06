@@ -6,7 +6,7 @@
 </p>
 
 <p align='center'>
-  <samp> <a href="http://cpwp.gyh.cool/">cpwp.gyh.cool</a> </samp>
+  <samp> <a href="http://pc.gyh.cool/">pc.gyh.cool</a> </samp>
 </p>
 
-![cpwp.gyh.cool](./cpwp.gyh.cool.png)
+![pc.gyh.cool](./pc.gyh.cool.png)
