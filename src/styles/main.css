@@ -9,3 +9,8 @@ body,
 html.dark {
   background: #121212;
 }
+
+:root {
+  --primary: #d75455e6;
+  --primary-deep: #d75455;
+}
